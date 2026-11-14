@@ -1,7 +1,14 @@
 #  https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos/522823#522823 
 { stdenv, lib, coreutils, dpkg, glibc, gcc-unwrapped, autoPatchelfHook, callPackage, gtk2-x11
   , libdbusmenu
-  , xorg
+  , libxcb
+  , libxcursor
+  , libxext
+  , libsm
+  , libice
+  , libxi
+  , libxrandr
+  , libx11
   , libGL
   , cairo
   , alsa-lib
@@ -41,21 +48,21 @@ in stdenv.mkDerivation {
     gcc-unwrapped
     gtk2-x11
     libdbusmenu
-    xorg.libxcb
+    libxcb
     libGL
-    xorg.libXcursor
+    libxcursor
     cairo
-    xorg.libXext
+    libxext
     alsa-lib
     sqlite
-    xorg.libSM
+    libsm
     libxslt
-    xorg.libICE
+    libice
     libGLU
     libxml2_13
-    xorg.libXi
-    xorg.libXrandr
-    xorg.libX11
+    libxi
+    libxrandr
+    libx11
     zlib
     glib
   ];
