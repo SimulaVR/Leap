@@ -8,7 +8,7 @@
   , sqlite
   , libxslt
   , libGLU
-  , xml2
+  , libxml2_13
   , zlib
   , glib
 }:
@@ -52,7 +52,7 @@ in stdenv.mkDerivation {
     libxslt
     xorg.libICE
     libGLU
-    xml2
+    libxml2_13
     xorg.libXi
     xorg.libXrandr
     xorg.libX11
